@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "895e72c9-7fc8-49bc-a496-00c3e08b8d03",
+		"name": "Grades Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createGrades",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\t\t\t  {\r\n\t\t\t   \r\n\t\t\t  \"grade\": \"1\",\r\n\t\t\t  \"fees\": 2500,\r\n\t\t\t  \"capacity\": 50,\r\n              \"dueDate\" : \"02/02/2023\"\r\n\t\t\t }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/gradeservice/createGrade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"gradeservice",
+						"createGrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllGrades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/gradeservice/grades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"gradeservice",
+						"grades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGradeFeeDetailsByGrade",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "1fffeae9-becb-4f30-9679-448dff4f2899",
+		"name": "GradeSheetPreviousYear",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createGradeSheet",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllSpreadSheetData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9094/gradeSheetPreviousYear/getAllGradeSheet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"gradeSheetPreviousYear",
+						"getAllGradeSheet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gradeSheetByStudentId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9094/gradeSheetPreviousYear/gradeSheetByStudentId?id=111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"gradeSheetPreviousYear",
+						"gradeSheetByStudentId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "111"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

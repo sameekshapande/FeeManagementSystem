@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "a161007d-9d98-496a-b9e4-7bf04e2d6e2d",
+		"name": "Enrollment Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EnrollStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"studentName\":\"Ritika\",\r\n\"grade\":\"1\",\r\n\"mobileNumber\":\"524804614\",\r\n\"schoolName\":\"SVN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/enrollmentservice/enrollStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"enrollmentservice",
+						"enrollStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/enrollmentservice/getAllStudents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"enrollmentservice",
+						"getAllStudents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentId\": 97,\r\n    \"studentName\": \"sameeka\",\r\n    \"grade\": 1,\r\n    \"mobileNumber\": \"524804614\",\r\n    \"schoolName\": \"SVN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/enrollmentservice/enrollStudent?id=97",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"enrollmentservice",
+						"enrollStudent"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "97"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paynow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"studentId\":65,\r\n\"grade\":1,\r\n\"cardNumber\":\"1111111111111111\",\r\n\"expiry\":\"11/25\",\r\n\"cvv\":\"123\",\r\n\"feeAamountPaid\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/enrollmentservice/payNow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"enrollmentservice",
+						"payNow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enrollExistingStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentId\":112,\r\n    \"studentName\":\"vaibhav\",\r\n    \"grade\":\"32\",\r\n\"mobileNumber\":\"524804614\",\r\n\"schoolName\":\"SVN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/enrollmentservice/enrollExistingStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"enrollmentservice",
+						"enrollExistingStudent"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
